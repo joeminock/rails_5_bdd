@@ -37,17 +37,13 @@ gem 'jbuilder', '~> 2.5'
 
 group :development, :test do
   ##TESTING###
-  gem "rspec-core", :github => "rspec/rspec-core"
-  gem "rspec-expectations", :github => "rspec/rspec-expectations"
-  gem "rspec-mocks", :github => "rspec/rspec-mocks"
-  gem "rspec-support", :github => "rspec/rspec-support"
-  gem "rspec-rails", :github => "rspec/rspec-rails"
+  gem 'rspec-rails', '3.1.0'
 # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end
 
 group :test do
-  gem 'capybara', '~> 2.13'
+  gem 'capybara', '~> 2.7.1'
 end
 
 group :development do
@@ -57,6 +53,12 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  # Guard is a command line tool to easily handle events on file system modifications.
+  gem 'guard', '~> 2.14', '>= 2.14.1'
+  # Guard::RSpec automatically run your specs (much like autotest).
+  gem 'guard-rspec', '~> 4.7', '>= 4.7.3'
+  # Guard::Cucumber automatically run your features (much like autotest)
+  gem 'guard-cucumber', '~> 2.1', '>= 2.1.2'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
